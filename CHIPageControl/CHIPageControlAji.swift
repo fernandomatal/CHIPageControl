@@ -67,10 +67,10 @@ open class CHIPageControlAji: CHIBasePageControl {
         super.layoutSubviews()
         
         let floatCount = CGFloat(inactive.count)
-        let x = (self.bounds.size.width - self.maxDiamater*floatCount - self.padding*(floatCount-1))*0.5
-        let y = (self.bounds.size.height - self.maxDiamater)*0.5
-        
-        var frame = CGRect(x: x, y: y, width: self.maxDiamater, height: self.maxDiamater)
+
+        let x = ceil((self.bounds.size.width - self.maxDiamater*floatCount - self.padding*(floatCount-1))*0.5)
+        let y = ceil((self.bounds.size.height - self.maxDiamater)*0.5)
+        var frame = CGRect(x: x, y: y, width: self.diameter, height: self.diameter)
 
         active.frame = frame
         var activeLayer = active
