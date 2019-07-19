@@ -70,7 +70,7 @@ open class CHIPageControlAji: CHIBasePageControl {
 
         let x = ceil((self.bounds.size.width - self.maxDiamater*floatCount - self.padding*(floatCount-1))*0.5)
         let y = ceil((self.bounds.size.height - self.maxDiamater)*0.5)
-        var frame = CGRect(x: x, y: y, width: self.diameter, height: self.diameter)
+        var frame = CGRect(x: x, y: y, width: self.diameter, height: self.maxDiamater)
 
         active.frame = frame
         var activeLayer = active
